@@ -1,4 +1,4 @@
-package com.example.projectjava;
+package com.example.ProjectJava;
 
 import android.content.ContentValues;
 import android.content.Context;

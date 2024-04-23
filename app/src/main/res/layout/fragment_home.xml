@@ -7,12 +7,34 @@
     android:background="@color/white"
     >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/home"
-        android:textColor="@color/black"
-        />
+        android:hint="Date"
+        android:focusable="false"
+        android:onClick="showDatePicker"/>
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:focusable="false"
+        android:onClick="showTimePicker"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Rendezvous"/>
 
 </FrameLayout>
