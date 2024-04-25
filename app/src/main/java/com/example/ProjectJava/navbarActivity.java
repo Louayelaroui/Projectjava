@@ -10,8 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.ProjectJava.R;
-
 public class navbarActivity extends AppCompatActivity {
 
     private int selectedTab = 1;
@@ -74,7 +72,7 @@ public class navbarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (selectedTab != 2) {
 
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, LikeFragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, ListFragment.class, null).commit();
 
                     homeText.setVisibility(View.GONE);
                     notificationText.setVisibility(View.GONE);
@@ -107,7 +105,7 @@ public class navbarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (selectedTab != 3) {
 
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, NotificationFragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, favFragment.class, null).commit();
 
                     likeText.setVisibility(View.GONE);
                     homeText.setVisibility(View.GONE);
@@ -139,7 +137,7 @@ public class navbarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selectedTab != 4) {
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, ProfileFragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, profilefragment.class, null).commit();
 
                     likeText.setVisibility(View.GONE);
                     notificationText.setVisibility(View.GONE);

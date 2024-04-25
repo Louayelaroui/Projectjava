@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.ProjectJava.R;
-
-public class SignInActivity extends AppCompatActivity {
+public class signinactivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,7 @@ public class SignInActivity extends AppCompatActivity {
 
         if(!username.isEmpty() && !password.isEmpty()) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(SignInActivity.this, navbarActivity.class);
+            Intent intent = new Intent(signinactivity.this, navbarActivity.class);
             startActivity(intent);
         } else {
             Toast.makeText(this, "Please enter username and password", Toast.LENGTH_SHORT).show();

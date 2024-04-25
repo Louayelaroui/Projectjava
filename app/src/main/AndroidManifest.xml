@@ -13,11 +13,6 @@
         android:theme="@style/Theme.ProjectJava"
         tools:targetApi="34">
         <activity
-            android:name=".EditProfileActivity"
-            android:exported="false"
-            android:label="@string/edit_profile"
-            android:theme="@style/Theme.ProjectJava" />
-        <activity
             android:name=".navbarActivity"
             android:exported="false" />
         <activity
@@ -30,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignInActivity"
+            android:name=".signinactivity"
             android:exported="true" />
     </application>
 

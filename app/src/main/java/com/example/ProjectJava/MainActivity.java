@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.ProjectJava.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         String vpassword= password.getText().toString();
         sqlHelper.insert(Vusername,vemail,vpassword);
         Toast.makeText(this,"your account has been created",Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(MainActivity.this, SignInActivity.class);
+        Intent intent = new Intent(MainActivity.this, signinactivity.class);
         startActivity(intent);
     }
 }

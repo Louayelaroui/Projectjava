@@ -23,12 +23,17 @@ public class sqlHelper extends SQLiteOpenHelper {
     // table Name
 
     public  static  final String Tbale_User ="User" ;
+    public  static  final String Table_rendv ="User" ;
 
     public  static  final String ID = "id";
     //Table Columns
     public  static final  String Username ="Username";
     public static  final  String email ="Email";
     public static  final  String Password  ="Password";
+    public static  final  String Date  ="Date";
+    public static  final  String Time  ="Time";
+    public static  final  String Description  ="Description";
+
 
     public sqlHelper(@Nullable Context context) {
         super(context, DB_NAME, null, DB_version);
@@ -38,6 +43,8 @@ public class sqlHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + Tbale_User + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + Username + " TEXT NOT NULL, " + email + " TEXT NOT NULL, " + Password + " TEXT NOT NULL);");
+        db.execSQL("CREATE TABLE " + Table_rendv + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + Date + " TEXT NOT NULL, " + Time + " TEXT NOT NULL, " + Description + " TEXT NOT NULL);");
 
     }
     public  void insert(String username , String email ,String password ){
@@ -47,6 +54,16 @@ public class sqlHelper extends SQLiteOpenHelper {
         contentValue.put(sqlHelper.email,email) ;
         contentValue.put(sqlHelper.Password,password) ;
         db.insert(sqlHelper.Tbale_User ,null,contentValue);
+        db.close();
+
+    }
+    public  void addrendezvous(String Date , String Time ,String Description ){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValue =new ContentValues();
+        contentValue.put(sqlHelper.Date,Date) ;
+        contentValue.put(sqlHelper.Time,Time) ;
+        contentValue.put(sqlHelper.Description,Description) ;
+        db.insert(sqlHelper.Table_rendv ,null,contentValue);
         db.close();
 
     }
