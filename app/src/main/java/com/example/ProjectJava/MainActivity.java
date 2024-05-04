@@ -12,12 +12,12 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    sqlHelper sqlHelper;
+    sqlhelper sqlHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sqlHelper =new sqlHelper(MainActivity.this);
+        sqlHelper =new sqlhelper(MainActivity.this);
         setContentView(R.layout.signup);
 
     }

@@ -8,18 +8,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.app.DatePickerDialog;
 import android.widget.DatePicker;
+
 import java.util.Calendar;
 
 import androidx.fragment.app.Fragment;
 
-public class HomeFragment extends Fragment {
+public class homeFragment extends Fragment {
 
-    public HomeFragment() {
+    public homeFragment() {
         // Required empty public constructor
     }
 
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static homeFragment newInstance(String param1, String param2) {
+        homeFragment fragment = new homeFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -42,7 +43,7 @@ public class HomeFragment extends Fragment {
                 String time = editTextTime.getText().toString();
                 String description = editTextDescription.getText().toString();
 
-                sqlHelper db = new sqlHelper(getContext());
+                sqlhelper db = new sqlhelper(getContext());
                 db.addrendezvous(date, time, description);
 
                 editTextDate.setText("");
@@ -71,4 +72,6 @@ public class HomeFragment extends Fragment {
                 }, year, month, day);
         datePickerDialog.show();
     }
+
+
 }

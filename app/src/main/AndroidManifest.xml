@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ProjectJava"
         tools:targetApi="34">
         <activity
-            android:name=".navbarActivity"
+            android:name=".navbaractivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

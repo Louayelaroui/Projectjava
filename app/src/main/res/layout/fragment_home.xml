@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
+    tools:context=".homeFragment"
     android:background="@color/white"
     android:padding="16dp"
     >
@@ -25,11 +25,11 @@
         android:hint="Select Date"
         android:focusable="false"
         android:drawableEnd="@drawable/ic_calendor"
-    android:onClick="showDatePicker"
-    android:layout_marginTop="150dp"
-    android:layout_marginBottom="8dp"
-    android:inputType="none"
-    android:padding="10dp"/>
+        android:onClick="showDatePicker"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="none"
+        android:padding="10dp"/>
 
 
     <EditText
@@ -37,17 +37,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Time"
-        android:focusable="false"
-        android:layout_marginTop="200dp"
-        android:onClick="showTimePicker"
-        android:layout_marginBottom="8dp"/> <!-- Added margin to the bottom -->
+        android:inputType="textMultiLine"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Description"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="280dp"
         android:inputType="textMultiLine"
         android:layout_marginBottom="16dp"/> <!-- Increased margin to the bottom for more spacing -->
 
@@ -56,6 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save Rendezvous"
-        android:layout_marginTop="300dp" />
+        android:layout_marginTop="350dp" />
 
 </FrameLayout>

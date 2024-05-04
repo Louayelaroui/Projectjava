@@ -25,7 +25,7 @@ public class signinactivity extends AppCompatActivity {
 
         if(!username.isEmpty() && !password.isEmpty()) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(signinactivity.this, navbarActivity.class);
+            Intent intent = new Intent(signinactivity.this, navbaractivity.class);
             startActivity(intent);
         } else {
             Toast.makeText(this, "Please enter username and password", Toast.LENGTH_SHORT).show();

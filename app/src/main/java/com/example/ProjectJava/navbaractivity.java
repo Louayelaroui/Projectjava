@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class navbarActivity extends AppCompatActivity {
+public class navbaractivity extends AppCompatActivity {
 
     private int selectedTab = 1;
     @Override
@@ -33,13 +33,13 @@ public class navbarActivity extends AppCompatActivity {
         final TextView notificationText = findViewById(R.id.notificationText);
         final TextView profileText = findViewById(R.id.profileText);
 
-        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, HomeFragment.class, null).commit();
+        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, homeFragment.class, null).commit();
         homeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (selectedTab != 1) {
 
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, HomeFragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, homeFragment.class, null).commit();
 
                     likeText.setVisibility(View.GONE);
                     notificationText.setVisibility(View.GONE);
@@ -72,7 +72,7 @@ public class navbarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (selectedTab != 2) {
 
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, ListFragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, Listfavfragment.class, null).commit();
 
                     homeText.setVisibility(View.GONE);
                     notificationText.setVisibility(View.GONE);
@@ -105,7 +105,7 @@ public class navbarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (selectedTab != 3) {
 
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, favFragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, ListFragment.class, null).commit();
 
                     likeText.setVisibility(View.GONE);
                     homeText.setVisibility(View.GONE);
@@ -137,7 +137,7 @@ public class navbarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (selectedTab != 4) {
-                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, profilefragment.class, null).commit();
+                    getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).replace(R.id.fragmentContainer, ProfileFragment.class, null).commit();
 
                     likeText.setVisibility(View.GONE);
                     notificationText.setVisibility(View.GONE);
